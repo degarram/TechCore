@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechCore</title>
+    <!-- Google Fonts: Agdasima -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/styles.css" />
+</head>
+
+<body>
+    <!-- HEADER PRINCIPAL (<header>) -->
+    <header class="bg-techcore-dark py-2 border-bottom border-dark">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center gy-2">
+                <!-- Logotipo / Marca (<h1> semántico con enlace) -->
+                <h1 class="col-auto m-0 fs-5">
+                    <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold text-decoration-none" href="#">
+                        <span class="bg-primary text-white rounded d-inline-flex align-items-center justify-content-center fw-bold" style="width: 30px; height: 30px; font-size: 1rem;">T</span>
+                        <span>TechCore</span>
+                    </a>
+                </h1>
+
+                <!-- Barra de búsqueda (<search> con <form> y <label>) -->
+                <search class="col-12 col-md-6 col-lg-5 mx-auto">
+                    <form role="search">
+                        <label class="input-group mb-0 w-100">
+                            <span class="input-group-text bg-white border-end-0 text-muted ps-3 pe-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                </svg>
+                            </span>
+                            <input class="form-control border-start-0 ps-1" type="search" placeholder="Búsqueda" aria-label="Buscar productos">
+                        </label>
+                    </form>
+                </search>
+
+                <!-- Navegación de usuario y carrito (<nav> con <ul> y <li>) -->
+                <nav class="col-auto ms-auto" aria-label="Usuario y carrito">
+                    <ul class="d-flex align-items-center gap-3 list-unstyled mb-0">
+                        <li><a href="#" class="text-white-50 text-decoration-none small">Registro</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none small">Inicio de sesión</a></li>
+                        <li>
+                            <a href="#" class="d-flex align-items-center text-white text-decoration-none ms-1" aria-label="Carrito de compras con 0 artículos">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag me-1" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                </svg>
+                                <span class="badge bg-primary text-white rounded px-2 py-1">
+                                    <data value="0">0</data>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- BARRA SECUNDARIA DE CATEGORÍAS (<nav> con lista <ul>/<li>) -->
+    <nav class="bg-white border-bottom py-2" aria-label="Categorías principales">
+        <ul class="container-fluid px-4 d-flex align-items-center gap-4 flex-nowrap overflow-x-auto list-unstyled mb-0">
+            <li><a href="#" class="category-nav-link active">COMPONENTES</a></li>
+            <li><a href="#" class="category-nav-link">ORDENADORES</a></li>
+            <li><a href="#" class="category-nav-link">PERIFÉRICOS</a></li>
+            <li><a href="#" class="category-nav-link">CONSOLAS Y VIDEOJUEGOS</a></li>
+            <li><a href="#" class="category-nav-link">MÓVILES Y TABLETS</a></li>
+            <li><a href="#" class="category-nav-link">ELECTRODOMÉSTICOS</a></li>
+            <li><a href="#" class="category-nav-link">HOGAR Y DOMÓTICA</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL (<main>) -->
+    <main>
+        <!-- SECCIÓN HERO: PRODUCTO DESTACADO -->
+        <section class="hero-section text-white py-5" aria-labelledby="hero-title">
+            <div class="container py-lg-4">
+                <div class="row align-items-center g-4">
+                    <!-- Presentación del producto destacado (<article>) -->
+                    <article class="col-lg-6">
+                        <hgroup class="mb-4">
+                            <h2 id="hero-title" class="display-5 fw-bold text-white mb-3">Kingston Fury Impact</h2>
+                            <p class="text-white-50 fs-6 mb-0" style="max-width: 480px;">Kingston Fury Impact SO-DIMM DDR4 3200MHz PC4-25600 32GB CL20</p>
+                        </hgroup>
+                        <button type="button" class="btn btn-primary px-4 py-2 fw-semibold">Añadir al carrito</button>
+                    </article>
+
+                    <!-- Ilustración gráfica del producto (<figure> con <picture>) -->
+                    <figure class="col-lg-6 text-center text-lg-end m-0">
+                        <picture class="product-placeholder bg-checkerboard border rounded d-block" role="img" aria-label="Previsualización de producto 1"></picture>
+                        <figcaption class="visually-hidden">Módulo de memoria RAM Kingston Fury Impact DDR4 SO-DIMM</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: ARTÍCULOS DESTACADOS (<section>) -->
+        <section class="py-5 bg-white" aria-labelledby="featured-title">
+            <div class="container">
+                <header class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 id="featured-title" class="h4 fw-bold mb-0 text-dark">Artículos Destacados</h2>
+                    <a href="#" class="text-primary text-decoration-none small fw-semibold">Ver más productos &rarr;</a>
+                </header>
+
+                <!-- Grid de productos estructurado en lista semántica (<ol> con <li> y <article>) -->
+                <ol class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 list-unstyled mb-0">
+                    <!-- Producto 1 -->
+                    <li class="col">
+                        <article class="card h-100 border p-3 rounded-2 shadow-none">
+                            <figure class="mb-3">
+                                <picture class="product-placeholder bg-checkerboard border rounded d-block" role="img" aria-label="Previsualización de producto 1"></picture>
+                            </figure>
+                            <section class="card-body p-0 d-flex flex-column">
+                                <hgroup class="mb-2">
+                                    <h3 class="h6 fw-semibold text-dark mb-1">Nombre del producto</h3>
+                                    <p class="text-muted small mb-0">Descripción del producto</p>
+                                </hgroup>
+                                <p class="fw-bold fs-6 text-dark mb-3">
+                                    <data value="00.00">XX,XX €</data>
+                                </p>
+                                <footer class="mt-auto">
+                                    <button type="button" class="btn btn-primary w-100 py-2 fw-semibold">Añadir al carrito</button>
+                                </footer>
+                            </section>
+                        </article>
+                    </li>
+
+                    <!-- Producto 2 -->
+                    <li class="col">
+                        <article class="card h-100 border p-3 rounded-2 shadow-none">
+                            <figure class="mb-3">
+                                <picture class="product-placeholder border rounded d-block" role="img" aria-label="Previsualización de producto 2"></picture>
+                            </figure>
+                            <section class="card-body p-0 d-flex flex-column">
+                                <hgroup class="mb-2">
+                                    <h3 class="h6 fw-semibold text-dark mb-1">Nombre del producto</h3>
+                                    <p class="text-muted small mb-0">Descripción del producto</p>
+                                </hgroup>
+                                <p class="fw-bold fs-6 text-dark mb-3">
+                                    <data value="00.00">XX,XX €</data>
+                                </p>
+                                <footer class="mt-auto">
+                                    <button type="button" class="btn btn-primary w-100 py-2 fw-semibold">Añadir al carrito</button>
+                                </footer>
+                            </section>
+                        </article>
+                    </li>
+
+                    <!-- Producto 3 -->
+                    <li class="col">
+                        <article class="card h-100 border p-3 rounded-2 shadow-none">
+                            <figure class="mb-3">
+                                <picture class="product-placeholder border rounded d-block" role="img" aria-label="Previsualización de producto 3"></picture>
+                            </figure>
+                            <section class="card-body p-0 d-flex flex-column">
+                                <hgroup class="mb-2">
+                                    <h3 class="h6 fw-semibold text-dark mb-1">Nombre del producto</h3>
+                                    <p class="text-muted small mb-0">Descripción del producto</p>
+                                </hgroup>
+                                <p class="fw-bold fs-6 text-dark mb-3">
+                                    <data value="00.00">XX,XX €</data>
+                                </p>
+                                <footer class="mt-auto">
+                                    <button type="button" class="btn btn-primary w-100 py-2 fw-semibold">Añadir al carrito</button>
+                                </footer>
+                            </section>
+                        </article>
+                    </li>
+
+                    <!-- Producto 4 -->
+                    <li class="col">
+                        <article class="card h-100 border p-3 rounded-2 shadow-none">
+                            <figure class="mb-3">
+                                <picture class="product-placeholder border rounded d-block" role="img" aria-label="Previsualización de producto 4"></picture>
+                            </figure>
+                            <section class="card-body p-0 d-flex flex-column">
+                                <hgroup class="mb-2">
+                                    <h3 class="h6 fw-semibold text-dark mb-1">Nombre del producto</h3>
+                                    <p class="text-muted small mb-0">Descripción del producto</p>
+                                </hgroup>
+                                <p class="fw-bold fs-6 text-dark mb-3">
+                                    <data value="00.00">XX,XX €</data>
+                                </p>
+                                <footer class="mt-auto">
+                                    <button type="button" class="btn btn-primary w-100 py-2 fw-semibold">Añadir al carrito</button>
+                                </footer>
+                            </section>
+                        </article>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CATEGORÍAS (<section>) -->
+        <section class="py-5" style="background-color: #f6f7f9;" aria-labelledby="categories-title">
+            <div class="container">
+                <h2 id="categories-title" class="text-uppercase text-secondary fw-bold small mb-3" style="letter-spacing: 0.5px; font-size: 0.72rem;">CATEGORÍAS</h2>
+                <ul class="row row-cols-2 row-cols-sm-3 row-cols-md-6 g-3 list-unstyled mb-0">
+                    <!-- Categoría 1 -->
+                    <li class="col">
+                        <article class="card category-card bg-white text-center py-4 px-2 h-100 shadow-sm rounded-2">
+                            <a href="#" class="card-body text-decoration-none p-0 d-flex flex-column align-items-center justify-content-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mb-2" aria-hidden="true">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                                <h3 class="small text-dark fw-medium mt-1 mb-0 fs-6">Categoría 1</h3>
+                            </a>
+                        </article>
+                    </li>
+
+                    <!-- Categoría 2 -->
+                    <li class="col">
+                        <article class="card category-card bg-white text-center py-4 px-2 h-100 shadow-sm rounded-2">
+                            <a href="#" class="card-body text-decoration-none p-0 d-flex flex-column align-items-center justify-content-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mb-2" aria-hidden="true">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                                <h3 class="small text-dark fw-medium mt-1 mb-0 fs-6">Categoría 2</h3>
+                            </a>
+                        </article>
+                    </li>
+
+                    <!-- Categoría 3 -->
+                    <li class="col">
+                        <article class="card category-card bg-white text-center py-4 px-2 h-100 shadow-sm rounded-2">
+                            <a href="#" class="card-body text-decoration-none p-0 d-flex flex-column align-items-center justify-content-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mb-2" aria-hidden="true">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                                <h3 class="small text-dark fw-medium mt-1 mb-0 fs-6">Categoría 3</h3>
+                            </a>
+                        </article>
+                    </li>
+
+                    <!-- Categoría 4 -->
+                    <li class="col">
+                        <article class="card category-card bg-white text-center py-4 px-2 h-100 shadow-sm rounded-2">
+                            <a href="#" class="card-body text-decoration-none p-0 d-flex flex-column align-items-center justify-content-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mb-2" aria-hidden="true">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                                <h3 class="small text-dark fw-medium mt-1 mb-0 fs-6">Categoría 4</h3>
+                            </a>
+                        </article>
+                    </li>
+
+                    <!-- Categoría 5 -->
+                    <li class="col">
+                        <article class="card category-card bg-white text-center py-4 px-2 h-100 shadow-sm rounded-2">
+                            <a href="#" class="card-body text-decoration-none p-0 d-flex flex-column align-items-center justify-content-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mb-2" aria-hidden="true">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                                <h3 class="small text-dark fw-medium mt-1 mb-0 fs-6">Categoría 5</h3>
+                            </a>
+                        </article>
+                    </li>
+
+                    <!-- Categoría 6 -->
+                    <li class="col">
+                        <article class="card category-card bg-white text-center py-4 px-2 h-100 shadow-sm rounded-2">
+                            <a href="#" class="card-body text-decoration-none p-0 d-flex flex-column align-items-center justify-content-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="mb-2" aria-hidden="true">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                                <h3 class="small text-dark fw-medium mt-1 mb-0 fs-6">Categoría 6</h3>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (<footer role="contentinfo">) -->
+    <footer class="bg-techcore-dark text-white pt-5 pb-4" role="contentinfo">
+        <div class="container">
+            <!-- Sección de información y enlaces (<section>) -->
+            <section class="row gy-4 mb-4" aria-label="Enlaces e información corporativa">
+                <!-- Información de contacto y lema corporativo (<address>) -->
+                <address class="col-12 col-md-3 fst-normal mb-0">
+                    <hgroup class="mb-2">
+                        <h4 class="fw-bold text-white mb-2 fs-5">TechCore</h4>
+                        <p class="text-white-50 small mb-0">Tu tienda de tecnología de confianza</p>
+                    </hgroup>
+                </address>
+
+                <!-- Columna Hardware (<nav>) -->
+                <nav class="col-6 col-md-3" aria-label="Enlaces de hardware">
+                    <h5 class="text-uppercase text-white fw-bold small mb-3 fs-6" style="letter-spacing: 0.5px;">HARDWARE</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Enlace</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Enlace</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Enlace</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Columna Ayuda & Enlace (<nav>) -->
+                <nav class="col-6 col-md-3" aria-label="Enlaces de ayuda">
+                    <h5 class="text-uppercase text-white fw-bold small mb-3 fs-6" style="letter-spacing: 0.5px;">AYUDA & ENLACE</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Enlace</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Enlace</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Enlace</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Columna Compañía (<nav>) -->
+                <nav class="col-6 col-md-3" aria-label="Enlaces de compañía">
+                    <h5 class="text-uppercase text-white fw-bold small mb-3 fs-6" style="letter-spacing: 0.5px;">COMPAÑÍA</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Enlace</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Enlace</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Enlace</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <hr class="border-secondary opacity-25 my-4">
+
+            <!-- Fila inferior de Copyright e Idioma (<p> con <small> y <time>) -->
+            <p class="d-flex justify-content-between align-items-center text-white-50 small mb-0">
+                <small>&copy; <time datetime="2026">2026</time> TechCore&trade; - Todos los derechos reservados.</small>
+                <small>España | Español</small>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
