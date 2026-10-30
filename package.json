@@ -1,0 +1,30 @@
+{
+  "name": "techcore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/degarram/TechCore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/degarram/TechCore/issues"
+  },
+  "homepage": "https://github.com/degarram/TechCore#readme",
+  "devDependencies": {
+    "sass": "^1.107.0"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}

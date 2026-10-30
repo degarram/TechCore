@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+$font-family-sans-serif: 'Agdasima', sans-serif;
+$font-family-base: 'Agdasima', sans-serif;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* Global font configuration */
+:root {
+  --bs-body-font-family: 'Agdasima', sans-serif;
+  --bs-font-sans-serif: 'Agdasima', sans-serif;
+}
+
+html, body, button, input, select, textarea, .btn, .form-control {
+  font-family: 'Agdasima', sans-serif !important;
+}
+
+/* Custom styles for TechCore matching reference design */
+.bg-techcore-dark {
+  background-color: #0b1320 !important;
+}
+
+.hero-section {
+  background-color: #0b1320;
+  min-height: 340px;
+}
+
+.hero-product-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.bg-checkerboard {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+    linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+    linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+.product-placeholder {
+  background-color: #f0f1f3;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}
+
+.category-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  border: 1px solid #e9ecef;
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.category-nav-link {
+  color: #333333;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.category-nav-link:hover,
+.category-nav-link.active {
+  color: #0d6efd;
+  border-bottom-color: #0d6efd;
+}
