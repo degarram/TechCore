@@ -286,6 +286,93 @@
                 </ul>
             </div>
         </section>
+
+        <section class="py-5 bg-white" aria-labelledby="contact-title">
+            <div class="container">
+                <header class="mb-4">
+                    <h2 id="contact-title" class="h4 fw-bold text-dark mb-2">Contacta con TechCore</h2>
+                    <p class="text-muted mb-0">Cuéntanos cómo podemos ayudarte y te responderemos lo antes posible.</p>
+                </header>
+
+                <form id="contact-form" class="row g-3 needs-validation" novalidate>
+                    <div class="col-12 col-md-6">
+                        <label for="full-name" class="form-label">Nombre completo</label>
+                        <input
+                            id="full-name"
+                            name="fullName"
+                            class="form-control"
+                            type="text"
+                            minlength="2"
+                            pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñÜü]+(?:[ '\-][A-Za-zÁÉÍÓÚáéíóúÑñÜü]+)+$"
+                            autocomplete="name"
+                            required
+                            aria-describedby="full-name-invalid full-name-valid"
+                        >
+                        <div id="full-name-invalid" class="invalid-feedback">Introduce tu nombre y apellido, usando solo letras.</div>
+                        <div id="full-name-valid" class="valid-feedback">El nombre tiene un formato válido.</div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input
+                            id="email"
+                            name="email"
+                            class="form-control"
+                            type="email"
+                            autocomplete="email"
+                            required
+                            aria-describedby="email-invalid email-valid"
+                        >
+                        <div id="email-invalid" class="invalid-feedback">Introduce una dirección de correo electrónico válida.</div>
+                        <div id="email-valid" class="valid-feedback">El correo electrónico tiene un formato válido.</div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="inquiry-type" class="form-label">Tipo de consulta</label>
+                        <select
+                            id="inquiry-type"
+                            name="inquiryType"
+                            class="form-select"
+                            required
+                            aria-describedby="inquiry-type-invalid inquiry-type-valid"
+                        >
+                            <option value="" selected disabled>Selecciona una opción</option>
+                            <option value="product">Información sobre un producto</option>
+                            <option value="order">Estado de un pedido</option>
+                            <option value="technical">Soporte técnico</option>
+                            <option value="other">Otra consulta</option>
+                        </select>
+                        <div id="inquiry-type-invalid" class="invalid-feedback">Selecciona el tipo de consulta.</div>
+                        <div id="inquiry-type-valid" class="valid-feedback">Has seleccionado un tipo de consulta.</div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            class="form-control"
+                            rows="5"
+                            minlength="20"
+                            maxlength="1000"
+                            required
+                            aria-describedby="message-help message-invalid message-valid"
+                        ></textarea>
+                        <div id="message-help" class="form-text">Escribe entre 20 y 1000 caracteres.</div>
+                        <div id="message-invalid" class="invalid-feedback">Escribe un mensaje de entre 20 y 1000 caracteres.</div>
+                        <div id="message-valid" class="valid-feedback">El mensaje tiene una longitud válida.</div>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary px-4">Enviar consulta</button>
+                    </div>
+
+                    <div id="contact-success" class="col-12 alert alert-success d-none mb-0" role="status" tabindex="-1">
+                        Hemos recibido tu consulta. Te responderemos lo antes posible.
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <!-- FOOTER (<footer role="contentinfo">) -->
