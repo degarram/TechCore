@@ -1,0 +1,30 @@
+@mixin respond-to($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint: #{$breakpoint}.";
+  }
+}
+
+@mixin interactive-lift($distance: -2px) {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY($distance);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@mixin focus-ring($color: $techcore-primary) {
+  &:focus {
+    outline: 2px solid rgba($color, 0.45);
+    outline-offset: 2px;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color;
+    outline-offset: 3px;
+  }
+}

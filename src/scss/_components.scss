@@ -1,0 +1,196 @@
+html,
+body,
+button,
+input,
+select,
+textarea,
+.btn,
+.form-control {
+  font-family: $techcore-font !important;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body > main {
+  flex: 1 0 auto;
+}
+
+body > footer {
+  flex-shrink: 0;
+}
+
+:root {
+  --bs-body-font-family: #{$techcore-font};
+  --bs-font-sans-serif: #{$techcore-font};
+}
+
+.bg-techcore-dark,
+.hero-section {
+  background-color: $techcore-dark !important;
+}
+
+.hero-section {
+  min-height: 340px;
+
+  @include respond-to(lg) {
+    min-height: 360px;
+  }
+}
+
+.product-card {
+  @include interactive-lift;
+  border: 1px solid $techcore-border;
+
+  &__title,
+  &__price {
+    color: var(--bs-emphasis-color);
+  }
+
+  &__description {
+    color: var(--bs-secondary-color);
+  }
+
+  &__button {
+    @include focus-ring;
+  }
+
+  &--featured {
+    border-color: $techcore-primary;
+  }
+}
+
+.contact-form {
+  &__label {
+    font-weight: 700;
+  }
+
+  &__control {
+    @include focus-ring;
+  }
+
+  &__submit {
+    @include focus-ring;
+  }
+}
+
+.product-placeholder {
+  background-color: #f0f1f3;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}
+
+.bg-checkerboard {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+    linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+.category-card {
+  @include interactive-lift;
+  border: 1px solid $techcore-border;
+  cursor: pointer;
+}
+
+.category-nav-link {
+  @include focus-ring;
+  color: $techcore-text;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+
+  &:hover,
+  &.active {
+    color: $techcore-primary;
+    border-bottom-color: $techcore-primary;
+  }
+}
+
+.btn,
+.form-control,
+.form-select,
+.form-check-input {
+  @include focus-ring;
+}
+
+.btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+[data-bs-theme='dark'] {
+  .bg-white,
+  .category-card {
+    background-color: #212529 !important;
+  }
+
+  .text-dark {
+    color: #f8f9fa !important;
+  }
+
+  .category-nav-link {
+    color: #dee2e6;
+
+    &:hover,
+    &.active {
+      color: #6ea8fe;
+    }
+  }
+
+  main > section[style] {
+    background-color: #161b22 !important;
+  }
+
+  .input-group-text {
+    background-color: #212529 !important;
+    color: #adb5bd !important;
+  }
+
+  .form-control {
+    background-color: #212529;
+    border-color: #495057;
+    color: #f8f9fa;
+
+    &::placeholder {
+      color: #adb5bd;
+    }
+  }
+
+  .bg-checkerboard {
+    background-color: #212529;
+    background-image:
+      linear-gradient(45deg, #343a40 25%, transparent 25%),
+      linear-gradient(-45deg, #343a40 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #343a40 75%),
+      linear-gradient(-45deg, transparent 75%, #343a40 75%);
+  }
+
+  .product-placeholder {
+    background-color: #343a40;
+  }
+
+  .category-card {
+    border-color: #495057;
+  }
+}
