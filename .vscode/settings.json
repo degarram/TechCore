@@ -1,6 +1,0 @@
-{
-  "css.styleSheets": [
-    "scss/**/*.css",
-    "scss/**/*.scss"
-  ]
-}

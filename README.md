@@ -93,11 +93,11 @@ Resultados documentados:
 
 Adjunta aquí las capturas de pantalla obtenidas en los validadores:
 
-| Validador | Captura |
-|---|---|
-| W3C HTML5 (`index.html`) |  |
-| W3C HTML5 (`contacto.html`) |  |
-| W3C CSS |  |
+| Validador                   | Captura |
+| --------------------------- | ------- |
+| W3C HTML5 (`index.html`)    |         |
+| W3C HTML5 (`contacto.html`) |         |
+| W3C CSS                     |         |
 
 ## Autoría
 
