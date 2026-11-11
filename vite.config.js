@@ -1,14 +1,14 @@
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
+import { resolve } from "path";
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/TechCore/',
+  base: "/TechCore/",
   build: {
     rollupOptions: {
       input: {
-        index: resolve(__dirname, 'index.html'),
-        contacto: resolve(__dirname, 'contacto.html')
+        index: resolve(__dirname, "index.html"),
+        contacto: resolve(__dirname, "contacto.html"),
       },
     },
   },
-})
+});
