@@ -33,6 +33,12 @@ body > footer {
   --bs-font-sans-serif: #{$techcore-font};
 }
 
+img.theme-icon-sun,
+img.theme-icon-moon,
+img.bi-bag, {
+  filter: brightness(0) invert(1);
+}
+
 .bg-techcore-dark,
 .hero-section {
   background-color: $techcore-dark !important;

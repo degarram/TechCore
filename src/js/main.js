@@ -1,4 +1,6 @@
 import '../scss/styles.scss'
+import '@fontsource/agdasima/400.css'
+import '@fontsource/agdasima/700.css'
 import 'bootstrap'
 
 const themeToggle = document.querySelector('#theme-toggle')
